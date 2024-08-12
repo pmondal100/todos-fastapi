@@ -1,0 +1,52 @@
+# Python-related files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+
+# Virtual environment directories
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+fastapi_venv/
+
+# IDE/editor-related files
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Test output
+coverage/
+*.cover
+.tox/
+.nox/
+.cache/
+pytest_cache/
+htmlcov/
+*.pid
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# FastAPI generated static files
+static/
