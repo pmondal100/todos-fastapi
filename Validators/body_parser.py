@@ -27,7 +27,7 @@ class UserRequest(BaseModel):
     last_name: str = Field(min_length=3, max_length=15)
     password: str
     role: str
-    phone: int = Field(
+    phone_number: str = Field(
         pattern=r"^\+?[1-9]\d{1,14}$",
         description="A valid phone number starting with an optional '+' and followed by 1 to 15 digits.",
     )
@@ -41,7 +41,7 @@ class UserRequest(BaseModel):
                 "last_name": "lname",
                 "password": "admin@1234",
                 "role": "user",
-                "phone": "+918989535207",
+                "phone_number": "+918989535207",
             }
         }
     }
