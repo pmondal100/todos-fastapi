@@ -1,7 +1,6 @@
 from fastapi.testclient import TestClient
 from starlette import status
 from ..main import app
-from ..database.test_database_config import SessionLocal
 
 test_app = TestClient(app)
 
