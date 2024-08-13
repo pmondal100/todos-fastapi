@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Body, Depends, HTTPException
 from typing import Annotated
 from sqlalchemy.orm import Session
-from database import SessionLocal
-from models import Users
+from ..database.prod_sql_database import SessionLocal
+from ..database.models import Users
 from starlette import status
 from passlib.context import CryptContext
-from routers.auth_router import verify_access_token
+from .auth_router import verify_access_token
 from uuid import UUID
 
 router = APIRouter(prefix="/users", tags=["Users"])

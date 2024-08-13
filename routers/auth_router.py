@@ -3,9 +3,9 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from starlette import status
-from database import SessionLocal
-from Validators.body_parser import UserRequest
-from models import Users
+from ..database.prod_sql_database import SessionLocal
+from ..validators.body_parser import UserRequest
+from ..database.models import Users
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import JWTError, jwt

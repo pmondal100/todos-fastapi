@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
-from mongo_database_config import db, client
+from ..database.mongo_database_config import db, client
 from typing import Annotated
-from Validators.body_parser import MongoSampleRequest
+from ..validators.body_parser import MongoSampleRequest
 from passlib.context import CryptContext
-from routers.auth_router import verify_access_token
+from .auth_router import verify_access_token
 from bson import ObjectId
 from starlette import status
 

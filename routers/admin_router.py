@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, Path, HTTPException
 from typing import Annotated
 from sqlalchemy.orm import Session
-from database import SessionLocal
-from models import Todos
+from ..database.prod_sql_database import SessionLocal
+from ..database.models import Todos
 from starlette import status
-from routers.auth_router import verify_access_token
+from .auth_router import verify_access_token
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
 

@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, Path, HTTPException
 from typing import Annotated
 from sqlalchemy.orm import Session
-from database import SessionLocal
-from models import Todos
+from ..database.prod_sql_database import SessionLocal
+from ..database.models import Todos
 from starlette import status
-from Validators.body_parser import TodosRequest
-from routers.auth_router import verify_access_token
+from ..validators.body_parser import TodosRequest
+from .auth_router import verify_access_token
 from uuid import UUID
 
 router = APIRouter(prefix="/todos", tags=["Todos"])

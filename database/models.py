@@ -1,5 +1,5 @@
 import uuid
-from database import Base
+from .prod_sql_database import Base
 from sqlalchemy import Column, Integer, String, Boolean, UUID, ForeignKey
 
 class Users(Base):
