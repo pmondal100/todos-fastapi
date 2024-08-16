@@ -32,6 +32,10 @@ async def get_all(user: user_dependency, db: db_dependency):
 
 @router.delete("/delete_todo/{todo_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_todo(user: user_dependency, db: db_dependency, todo_id: int = Path(gt=0)):
+    todo = db.query(Todos).filter(Todos.id == todo_id).first()
+    print("here is the todo ", todo)
+    if todo is None:
+        raise HTTPException(status_code=404, detail="Todo not found")
     role = user.get("role")
     if role == "admin":
         db.query(Todos).filter(Todos.id == todo_id).delete()

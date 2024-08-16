@@ -72,7 +72,7 @@ async def update_todo(
         todo.priority = todo_request.priority
         todo.complete = todo_request.complete
         db.commit()
-        return {"data": todo_request}
+        return
 
     raise HTTPException(status_code=404, detail="Todo not found")
 
